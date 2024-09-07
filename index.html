@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="es-mx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="./styles/style-home.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
     <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Home</a>
-            <a class="header__menu__link" href="game.html">Juego Secreto</a>
-        </nav>
+        <div>
+            <a href="index.html">
+                <img class="logo" src="assets/logo.png" alt="logo">
+            </a>
+        </div>
+        <div>
+            <h1 class="presentacion__contenido__titulo">Juego del <strong class="destaque__de__titulo">número secreto</strong></h1>
+        </div>
     </header>
 
-    <main class="presentacion">
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">
-                Juego del Número Secreto <strong class="destaqueDeTitulo">¡Podrás adivinarlo!</strong>
-            </h1>
-
-            <p class="presentacion__contenido__parrafo">
-                Intrucciones: </p>
-            <p class="presentacion__contenido__parrafo">1. </p>
-
-            <div class="presentacion__enlaces">
-                <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2>
-                <a class="presentacion__enlaces__link" href="https://github.com/MStikMedina">
-                    <img src="./assets/github.png" alt="Logo de Github">Github</a>
-                <a class="presentacion__enlaces__link" href="https://www.linkedin.com/in/marlon-medina-programador/">
-                    <img src="./assets/linkedin.png" alt="Logo de LinkedIn">LinkedIn</a>
+    <main class="juego">
+        <div class="juego__explicacion">
+            <p1 class="presentacion__contenido__parrafo">Intrucciones:</p1>
+            <p2 class="presentacion__contenido__parrafo">- Indica un número del 1 al 10</p2>
+            <p3 class="presentacion__contenido__parrafo">- Intenta adivinar el número secreto</p3>
+        </div>
+        <div class="container">
+            <div class="container__contenido">
+                <div class="container__informaciones">
+                    <div class="container__texto">
+                        <p class="presentacion__contenido__parrafo"></p>
+                    </div>
+                    <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                    <div class="container__botones">
+                        <button onclick="verificarIntento();" class="container__boton">Intentar</button>
+                        <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                    </div>
+                </div>
             </div>
-        </section>
-        <img class="presentacion__imagen" src="./assets/Imagem.png" alt="Imagen de mí trabajando">
+        </div>
+        <script src="app.js"></script>
     </main>
 
     <footer class="footer">
         <p>Desarrollado por | Marlon Medina | Programador</p>
     </footer>
 </body>
+
 </html>
