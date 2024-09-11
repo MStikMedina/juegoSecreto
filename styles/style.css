@@ -78,7 +78,11 @@ body{
 }
 
 .container{
-    width: 50%;
+    width: 100%;
+    max-width: 600px; /* restringe el tamaño del contenedor */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box; /* agrego border box para que el pading no rompa el layout, ya que no fue incluido en tu global reset */
 }
 
 .container__contenido{
@@ -98,12 +102,14 @@ body{
 .container__boton {
     border-radius: 16px;
     background: #1875E8;
-    padding: 16px 24px;
     width: 100%;
     font-size: 24px;
     font-weight: 700;
     border: none;
     margin-top: 2rem;
+    flex: 1 1 45%; /* para que los botones ajusten su tamaño */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .container__boton:disabled {
@@ -119,7 +125,8 @@ body{
 }
 
 .container__input {
-    width: 87%;
+    width: 100%;
+    box-sizing: border-box;
     height: 72px;
     border-radius: 16px;
     background-color: #FFF;
@@ -133,7 +140,8 @@ body{
 
 .container__botones {
     display: flex;
-    gap: 2em;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
 .footer{
@@ -173,5 +181,15 @@ body{
 
     .container{
         width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 5px;
+    }
+
+    .container__input {
+        width: 100%; /* cuida el tamaño del input */
     }
 }
